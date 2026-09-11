@@ -1,0 +1,45 @@
+.resume-paper h3 {
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 4px;
+}
+
+.resume-paper h1 {
+  color: var(--accent-color);
+}
+
+.preview-skills span {
+  background: color-mix(in srgb, var(--accent-color) 15%, white);
+  color: var(--accent-color);
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin: 2px;
+  display: inline-block;
+  font-size: 0.85rem;
+}
+
+/* Two-column layout: main content + sidebar side by side */
+.resume-two-col {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.resume-col-side {
+  border-left: 2px solid var(--accent-color);
+  padding-left: 16px;
+}
+
+/* Stack back to one column on small screens so it's still readable */
+@media (max-width: 700px) {
+  .resume-two-col {
+    grid-template-columns: 1fr;
+  }
+  .resume-col-side {
+    border-left: none;
+    padding-left: 0;
+    border-top: 2px solid var(--accent-color);
+    padding-top: 16px;
+  }
+}
